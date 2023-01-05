@@ -47,6 +47,16 @@ int main()
     std::cout << std::endl;
     std::for_each(vec2.begin(), vec2.end(), Displayer<std::string>());
     std::cout << std::endl;
+    
+    Displayer<double> d3;
+    d3(3.33);
+    std::vector<double> vec3{ 1.1,1.2,1.3,1.4,1.5 };
+    std::for_each(vec3.begin(), vec3.end(), Displayer<double>());
+    std::cout << std::endl;
+    std::for_each(vec3.begin(), vec3.end(), d3);
+    std::cout << std::endl;
+
+
 
     return 0;
 }
