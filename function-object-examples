@@ -1,0 +1,28 @@
+// portfolio-function-objects.cpp : This file contains the 'main' function. Program execution begins and ends there.
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+
+struct Square_Functor {
+    void operator() (int x) {
+        std::cout << x * x << " ";
+    }
+};
+
+template <typename T>
+struct Displayer {
+    void operator() (const T& data) {
+        std::cout << data << " ";
+    }
+};
+
+
+
+int main()
+{
+    
+
+    return 0;
+}
+
