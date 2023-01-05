@@ -6,14 +6,14 @@
 
 struct Square_Functor {
     void operator() (int x) {
-        std::cout << x * x << " ";
+        std::cout << x * x << " " << std::endl;
     }
 };
 
 template <typename T>
 struct Displayer {
     void operator() (const T& data) {
-        std::cout << data << " ";
+        std::cout << data << " " << std::endl;
     }
 };
 
@@ -21,7 +21,15 @@ struct Displayer {
 
 int main()
 {
-    
+    std::cout << "\nTest1==================" << std::endl;
+    Square_Functor square1;
+    Square_Functor_1 square2;
+    square1(33);
+    square2(3.3);
+    Displayer<int> d1;
+    Displayer<std::string> d2;
+    d1(100);
+    d2("Jenny")
 
     return 0;
 }
