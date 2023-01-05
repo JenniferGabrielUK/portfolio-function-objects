@@ -6,6 +6,12 @@
 
 struct Square_Functor {
     void operator() (int x) {
+        std::cout << x * x << " ";
+    }
+};
+
+struct Square_Functor_1 {
+    void operator() (double x) {
         std::cout << x * x << " " << std::endl;
     }
 };
@@ -13,11 +19,9 @@ struct Square_Functor {
 template <typename T>
 struct Displayer {
     void operator() (const T& data) {
-        std::cout << data << " " << std::endl;
+        std::cout << data << " ";
     }
 };
-
-
 
 int main()
 {
@@ -30,6 +34,15 @@ int main()
     Displayer<std::string> d2;
     d1(100);
     d2("Jenny")
+    
+     std::cout << "\nTest2===================" << std::endl;
+    std::vector<int> vec1{ 1,2,3,4,5 };
+    std::vector<std::string> vec2{ "Jenny", "Elizabeth", "Gabriel" };
+    
+    std::for_each(vec1.begin(), vec1.end(), Displayer<int>());
+    std::cout << std::endl;
+    std::for_each(vec1.begin(), vec1.end(), square1);
+    std::cout << std::endl;
 
     return 0;
 }
