@@ -56,7 +56,9 @@ int main()
     std::for_each(vec3.begin(), vec3.end(), d3);
     std::cout << std::endl;
 
-
+    std::cout << "\nTest3=================" << std::endl;
+    std::for_each(vec1.begin(), vec1.end(), [](int x) {std::cout << x * x << " "; });
+    std::cout << std::endl;
 
     return 0;
 }
