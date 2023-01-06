@@ -63,6 +63,8 @@ int main()
     std::cout << std::endl;
     std::for_each(vec1.begin(), vec1.end(), [](int x) {std::cout << x << " "; });
     std::cout << std::endl;
+    std::for_each(vec2.begin(), vec2.end(), [](std::string s) {std::cout << s << " "; });
+    std::cout << std::endl;
 
     return 0;
 }
