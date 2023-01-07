@@ -80,6 +80,15 @@ int main()
     std::for_each(vec3.begin(), vec3.end(), [](double i) {std::cout << i << " "; });
     std::cout << std::endl;
 
+    std::cout << "\nTest4==================" << std::endl;
+    Multiplier multi{ 1000 };
+    vec1 = { 1,2,3,4,5 };
+    std::transform(vec1.begin(), vec1.end(), vec1.begin(), multi);
+    std::for_each(vec1.begin(), vec1.end(), d1);
+    std::cout << std::endl;
+    std::for_each(vec1.begin(), vec1.end(), Displayer <int>());
+    std::cout << std::endl;
+
     return 0;
 }
 
