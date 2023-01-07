@@ -67,6 +67,8 @@ int main()
     std::cout << std::endl;
     std::for_each(vec3.begin(), vec3.end(), [](std::double_t i) {std::cout << i * i << " "; });
     std::cout << std::endl;
+    std::for_each(vec3.begin(), vec3.end(), [](double i) {std::cout << i << " "; });
+    std::cout << std::endl;
 
     return 0;
 }
