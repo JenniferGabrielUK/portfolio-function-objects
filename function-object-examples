@@ -88,6 +88,9 @@ int main()
     std::cout << std::endl;
     std::for_each(vec1.begin(), vec1.end(), Displayer <int>());
     std::cout << std::endl;
+    std::transform(vec3.begin(), vec3.end(), vec3.begin(), multi); //multiplies the doubles but only recognises the integers.
+    std::for_each(vec3.begin(), vec3.end(), Displayer<double>());
+    std::cout << std::endl;
 
     return 0;
 }
