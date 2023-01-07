@@ -23,6 +23,16 @@ struct Displayer {
     }
 };
 
+class Multiplier {
+private:
+    int num{};
+public:
+    Multiplier(int n = 0) : num(n) {}; //single arguement defaulted constructor
+    int operator() (int n) const { //overloaidng the function call operator
+        return n * num;
+    }
+};
+
 int main()
 {
     std::cout << "\nTest1==================" << std::endl;
